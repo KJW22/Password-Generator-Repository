@@ -13,12 +13,12 @@ while (true) {(passwordLength>=8 && passwordLength<=128)
 // Code checks length inputted 
   // If the inputted length is greater than or equal to 2 and less than or equal to 128
     // Password length is accepted.
-    console.log("length accepted");
-  }
+    {console.log("length accepted");}
+  
   // Otherwise
-  if passwordLength<8
-    // Log "number is not greater than 2"
-    console.log("length not accepted");
+  else {
+    // Log "specifies password length"
+    console.log("length must between 8-128 characters");
   }
 }
 }
