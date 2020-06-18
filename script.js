@@ -7,20 +7,20 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-var passwordLength = prompt ("enter desired password length");
+var passwordLength = Number(prompt ("enter desired password length"));
+while (true) {(passwordLength>=8 && passwordLength<=128)
 
-// Password checks value inputted against array
-  // If the current number is greater than 2..
-  if (passwordLength >= 8 && passwordLength <= 128)  {
-    // Log "number is greater than 2".
+// Code checks length inputted 
+  // If the inputted length is greater than or equal to 2 and less than or equal to 128
+    // Password length is accepted.
     console.log("length accepted");
   }
   // Otherwise
-  else {
+  if passwordLength<8
     // Log "number is not greater than 2"
     console.log("length not accepted");
   }
 }
-
+}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
