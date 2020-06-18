@@ -11,14 +11,14 @@ var passwordLength = [1, 8, 2, 3, 1, 1, 6, 6, 6];
 
 // Password checks value inputted against array
   // If the current number is greater than 2..
-  if (nums[i] > 8) {
+  if (nums[i] >= 8 && nums[i] <= 128)  {
     // Log "number is greater than 2".
-    console.log("number is greater than 2");
+    console.log("accepted");
   }
   // Otherwise
   else {
     // Log "number is not greater than 2"
-    console.log("number is not greater than 2");
+    console.log("value not accepted");
   }
 }
 
