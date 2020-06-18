@@ -7,7 +7,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-var passwordLength = [1, 8, 2, 3, 1, 1, 6, 6, 6];
+var passwordLength = prompt ("enter desired password length");
 
 // Password checks value inputted against array
   // If the current number is greater than 2..
