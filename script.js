@@ -3,8 +3,7 @@
 var generateBtn = document.querySelector("#generate");
 generateBtn.onclick=function () 
 // Write password to the #password input
-{function writePassword() 
-  var password = generatePassword();
+  {var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -22,8 +21,24 @@ if (passwordLength>=8 && passwordLength<=128)
 
   // Otherwise 
     // Log "specifies password length"
-  else {console.log("length must be between 8-128 characters"};
+  else {console.log("length must be between 8-128 characters")};
 /* Function to generate combination of password */ 
+//var names for lines 47-61 stand for questions asked in prompts.
+var ucl = confirm ("use capital letters? Type y or n.");
+If (ucl === "yes"); {console.log("UpperCase=ABCDEFGHIJKLMNOPQRSTUVWXYZ")};
+If (ucl === "no"); {console.log("UpperCase=undefined")};
+
+var ulc = confirm ("use lowercase letters? Type y or n.");
+If (ulc === "yes"); {console.log("lowerCase=abcdefghijklmnopqrstuvwxyz")};
+If (ulc === "no"); {console.log("lowerCase=undefined")};
+
+var un = confirm ("use numbers? Type y or n.");
+If (un === "yes"); {console.log("number=0123456789")};
+If (un === "no"); {console.log("number=undefined")};
+
+var usc = confirm ("use special characters? Type y or n.");
+If (usc === "yes"); {console.log("specialCharacter=#$%&'()*+,-./:;<=>?@[\]^_`{|}~")};
+If (usc === "no"); {console.log("specialCharacter=undefined")};
 function generateP() { 
     var passCritera= "upperCase, LowerCase, number, specialCharacter"; 
     var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
@@ -31,7 +46,7 @@ function generateP() {
     var number = "0123456789";
     var specialCharacter = "#$%&'()*+,-./:;<=>?@[\]^_`{|}~"; 
       
-    for (i = 1; i <= 8; i++) { 
+    for (var i = 1; i <= 8; i++)  
         var char = Math.floor(Math.random() 
                     * str.length + 1); 
           
@@ -42,22 +57,7 @@ function generateP() {
 
 function gfg_Run() { 
     el_down.innerHTML = generateP(); 
-//var names for lines 47-61 stand for questions asked in prompts.
-var ucl = prompt ("use capital letters? Type y or n.");
-If (ucl === "yes"); {"UpperCase=ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
-If (ucl === "no"); {"UpperCase=undefined"};
 
-var ulc = prompt ("use lowercase letters? Type y or n.");
-If (ulc === "yes"); {"lowerCase=abcdefghijklmnopqrstuvwxyz"};
-If (ulc === "no"); {"lowerCase=undefined"};
-
-var un = prompt ("use numbers? Type y or n.");
-If (un === "yes"); {"number=0123456789"};
-If (un === "no"); {"number=undefined"};
-
-var usc = prompt ("use special characters? Type y or n.");
-If (usc === "yes"); {"specialCharacter=#$%&'()*+,-./:;<=>?@[\]^_`{|}~"};
-If (usc === "no"); {"specialCharacter=undefined"};
 
 // what I want is a prompt for each of the four types of characters. I want to be able to exclude the variables users say no to, and include the ones they say yes to.  
 //I will exclude the variables by having them be undefined when the user says no, and use the original variables when they say yes. 
